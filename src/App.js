@@ -1,6 +1,6 @@
 import './App.css';
-import Navbar from './components/Navbar';
 import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
 import ListMission from './components/pages/ListMission';
 import ListRockect from './components/pages/ListRockect';
 import Profile from './components/pages/Profile';

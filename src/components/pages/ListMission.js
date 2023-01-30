@@ -1,11 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-const ListMission = () => {
-  return (
-    <div>
-      <h1>ListMission</h1>
-    </div>
-  )
-}
+const ListMission = () => (
+  <div>
+    <h1>ListMission</h1>
+  </div>
+);
 
-export default ListMission
+export default ListMission;
