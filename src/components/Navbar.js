@@ -12,7 +12,7 @@ function Navbar() {
       </div>
       <ul className="flex-center no-style list-nav">
         <li>
-          <NavLink to="" path="/" className={({isActive})=> (isActive? "navLink active": "navLink")} exact>
+          <NavLink to="/" path="/" className={({isActive})=> (isActive? "navLink active": "navLink")}>
             Rockets
           </NavLink>
         </li>
