@@ -2,13 +2,12 @@ import React from 'react'
 import './ListRocket.css'
 
 const Rocket = (props) => {
-  console.log('in: ', props)
-  const {imgUrl, title, description} = props.rocket
+  const {id, flickr_images, rocket_name, description} = props.rocket
   return (
     <div className='row rocket'>
-      <img src={imgUrl} alt={"Rocket " + title } />
+      <img src={flickr_images} alt={"Rocket " + rocket_name } />
       <div className="column rocket-description">
-        <h4>{title}</h4>
+        <h4>{rocket_name}</h4>
         <p>{description}</p>
         <button>Reserve Rocket</button>
       </div>
