@@ -42,3 +42,19 @@
 .Not-Approved-button:active {
   background-color: rgba(255, 0, 0, 0.403);
 }
+
+.Approved {
+  background-color: #18a2ba;
+  border-radius: 12px;
+}
+
+.Approved-button {
+  background: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
+.List-mission-main {
+  margin: 2rem;
+}

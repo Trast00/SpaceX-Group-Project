@@ -19,13 +19,35 @@ export const missionaction = createAsyncThunk('data/fetch', async () => {
 const missionReducer = createSlice({
   name: 'Mission',
   initialState: { data: [] },
-  reducers: {},
+  reducers: {
+    Update: (state, action) => {
+      const newState = state.data.map((data) => {
+        if (data.id === action.payload) {
+          return { ...data, reserved: true };
+        }
+        return data;
+      });
+      return { ...state, data: [...newState] };
+    },
+    Default: (state, action) => {
+      const newState = state.data.map((data) => {
+        if (data.id === action.payload) {
+          return { ...data, reserved: false };
+        }
+        return data;
+      });
+      return { ...state, data: [...newState] };
+    },
+  },
   extraReducers: (builder) => {
-    builder.addCase(missionaction.fulfilled, (states, action) => {
+    builder
+      .addCase(missionaction.fulfilled, (states, action) => {
       // eslint-disable-next-line no-param-reassign
-      states.data = action.payload;
-    });
+        states.data = action.payload;
+      });
   },
 });
+
+export const { Update, Default } = missionReducer.actions;
 
 export default missionReducer;

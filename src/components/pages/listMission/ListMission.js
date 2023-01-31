@@ -1,14 +1,20 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { missionaction } from '../../../redux/missions/missionReducer';
+import { missionaction, Update, Default } from '../../../redux/missions/missionReducer';
 import './ListMission.css';
 
 const ListMission = () => {
   const dispatch = useDispatch();
-  const show = useSelector((data) => data.mission);
+  const UpdateDispatch = (id) => {
+    dispatch(Update(id));
+  };
+  const DefaultDispatch = (id) => {
+    dispatch(Default(id));
+  };
   useEffect(() => {
     dispatch(missionaction());
   }, [dispatch]);
+  const show = useSelector((data) => data.mission);
   return (
     <div>
       <ul className="List-mission-main">
@@ -23,7 +29,7 @@ const ListMission = () => {
             <p className="border">{data.description}</p>
             {data.reserved ? (
               <div className="border flex-center">
-                <p>Active Menmber</p>
+                <p className="Approved">Active Menmber</p>
               </div>
             ) : (
               <div className="border flex-center">
@@ -32,11 +38,11 @@ const ListMission = () => {
             )}
             {data.reserved ? (
               <div className="border flex-center">
-                <button type="button" className="Approved-button">Join Mission</button>
+                <button type="button" onClick={() => DefaultDispatch(data.id)} className="Not-Approved-button">Leave Mission</button>
               </div>
             ) : (
               <div className="border flex-center">
-                <button type="button" className="Not-Approved-button">Leave Mission</button>
+                <button type="button" onClick={() => UpdateDispatch(data.id)} className="Approved-button">Join Mission</button>
               </div>
             )}
           </li>

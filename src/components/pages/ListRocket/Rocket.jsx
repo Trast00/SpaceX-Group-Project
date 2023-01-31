@@ -19,12 +19,12 @@ const Rocket = (props) => {
 };
 
 Rocket.propType = {
-  rocket : PropTypes.shape({
-    id : PropTypes.string, 
-    flickr_images : PropTypes.string,
-    rocket_name : PropTypes.string,
-    description : PropTypes.string,
-    reserved : PropTypes.bool,
-  })
-}
+  rocket: PropTypes.shape({
+    id: PropTypes.string,
+    flickr_images: PropTypes.string,
+    rocket_name: PropTypes.string,
+    description: PropTypes.string,
+    reserved: PropTypes.bool,
+  }),
+};
 export default Rocket;
