@@ -5,7 +5,12 @@ export const missionaction = createAsyncThunk('data/fetch', async () => {
   const datafound = await fetchdata.json();
   const listdata = [];
   datafound.forEach((data) => {
-    const list = { id: data.mission_id, name: data.mission_name, description: data.description };
+    const list = {
+      id: data.mission_id,
+      name: data.mission_name,
+      description: data.description,
+      reserved: false,
+    };
     listdata.push(list);
   });
   return listdata;
@@ -16,11 +21,10 @@ const missionReducer = createSlice({
   initialState: { data: [] },
   reducers: {},
   extraReducers: (builder) => {
-    builder
-      .addCase(missionaction.fulfilled, (states, action) => {
-        // eslint-disable-next-line no-param-reassign
-        states.data = action.payload;
-      });
+    builder.addCase(missionaction.fulfilled, (states, action) => {
+      // eslint-disable-next-line no-param-reassign
+      states.data = action.payload;
+    });
   },
 });
 
