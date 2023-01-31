@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<ListRocket />} />
         <Route path="/Missions" element={<ListMission />} />
-        <Route path="/My Profile" element={<Profile />} />
+        <Route path="/myprofile" element={<Profile />} />
       </Routes>
     </div>
   );
