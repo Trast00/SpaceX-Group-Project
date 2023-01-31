@@ -6,12 +6,13 @@ import { fetchRockets } from '../../../redux/rockets/rocketReducer';
 
 const ListRocket = () => {
   const dispatch = useDispatch();
+  const listRocket = useSelector((state) => state.rocketReducer.listRocket, shallowEqual);
 
   useEffect(() => {
-    dispatch(fetchRockets());
+    if(!listRocket){
+      dispatch(fetchRockets());
+    }
   }, [dispatch]);
-
-  const listRocket = useSelector((state) => state.rocketReducer.listRocket, shallowEqual);
 
   return (
     <ul>
