@@ -35,9 +35,9 @@ exports[`test render List Rocket should match snapshoot 1`] = `
       <li>
         <a
           className="navLink"
-          href="/Missions"
+          href="/missions"
           onClick={[Function]}
-          path="/Missions"
+          path="/missions"
         >
           Missions
         </a>
@@ -48,9 +48,9 @@ exports[`test render List Rocket should match snapshoot 1`] = `
       <li>
         <a
           className="navLink"
-          href="/My Profile"
+          href="/myprofile"
           onClick={[Function]}
-          path="/My Profile"
+          path="/myprofile"
         >
           My Profile
         </a>

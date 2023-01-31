@@ -14,6 +14,7 @@ const Rocket = (props) => {
     <div className='row rocket'>
       <img src={flickr_images} alt={"Rocket " + rocket_name } />
       <div className="column rocket-description">
+        <h4>{rocket_name}</h4>
         <p>{reserved && (<span className='badge-reserved'>Reserved</span>)} {description}</p>
         {reserved? 
          <button onClick={()=>{dispatch(unreserveRocket(id))}}>Cancel reservation</button>

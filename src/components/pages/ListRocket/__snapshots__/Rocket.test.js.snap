@@ -11,6 +11,9 @@ exports[`test render List Rocket should match snapshoot 1`] = `
   <div
     className="column rocket-description"
   >
+    <h4>
+      rocket.name
+    </h4>
     <p>
        
       rocket.description

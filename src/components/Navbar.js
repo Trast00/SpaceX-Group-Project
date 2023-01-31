@@ -17,13 +17,13 @@ function Navbar() {
           </NavLink>
         </li>
         <li>
-          <NavLink to="Missions" path="/Missions" className={({ isActive }) => (isActive ? 'navLink active' : 'navLink')}>
+          <NavLink to="missions" path="/missions" className={({ isActive }) => (isActive ? 'navLink active' : 'navLink')}>
             Missions
           </NavLink>
         </li>
         <hr className="seprator" />
         <li>
-          <NavLink to="My Profile" path="/My Profile" className={({ isActive }) => (isActive ? 'navLink active' : 'navLink')}>
+          <NavLink to="myprofile" path="/myprofile" className={({ isActive }) => (isActive ? 'navLink active' : 'navLink')}>
             My Profile
           </NavLink>
         </li>
