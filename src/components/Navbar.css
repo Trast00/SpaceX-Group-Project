@@ -11,11 +11,14 @@
 
 .list-nav {
   gap: 8px;
-  font-size: 0.8rem;
-  color: var(--color-text-blue);
 }
 
-.seprator {
-  height: 15px;
-  border: 1px solid #121212;
+.navLink {
+  font-size: 0.8rem;
+  color: var(--color-text-blue);
+  text-decoration: none;
+}
+
+.navLink.active {
+  text-decoration: underline;
 }

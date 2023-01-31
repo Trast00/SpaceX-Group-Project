@@ -32,6 +32,11 @@
   border: none;
 }
 
+.seprator {
+  height: 15px;
+  border: 1px solid #121212;
+}
+
 .App {
   text-align: center;
 }

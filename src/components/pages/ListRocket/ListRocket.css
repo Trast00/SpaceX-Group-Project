@@ -1,0 +1,23 @@
+.rocket {
+  padding: 24px;
+  width: 100%;
+  text-align: start;
+}
+
+.rocket img {
+  width: 250px;
+  height: 150px;
+}
+
+.rocket-description {
+  padding-left: 12px;
+}
+
+.rocket button {
+  width: fit-content;
+  background-color: blue;
+  padding: 8px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}

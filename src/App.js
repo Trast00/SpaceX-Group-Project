@@ -2,7 +2,7 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import ListMission from './components/pages/ListMission';
-import ListRockect from './components/pages/ListRockect';
+import ListRocket from './components/pages/ListRocket/ListRocket';
 import Profile from './components/pages/Profile';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Routes>
-        <Route path="/" element={<ListRockect />} />
+        <Route path="/" element={<ListRocket />} />
         <Route path="/Missions" element={<ListMission />} />
         <Route path="/My Profile" element={<Profile />} />
       </Routes>
