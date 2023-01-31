@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { reserveRocket } from '../../../redux/rockets/rocketReducer'
+import { reserveRocket, unreserveRocket } from '../../../redux/rockets/rocketReducer'
 import './ListRocket.css'
 
 const Rocket = (props) => {
@@ -15,7 +15,7 @@ const Rocket = (props) => {
       <div className="column rocket-description">
         <p>{reserved && (<span className='badge-reserved'>Reserved</span>)} {description}</p>
         {reserved? 
-         <button >Cancel reservation</button>
+         <button onClick={()=>{dispatch(unreserveRocket(id))}}>Cancel reservation</button>
         : <button onClick={()=>{dispatch(reserveRocket(id))}}>Reserve Rocket</button>}
       </div>
     </div>
