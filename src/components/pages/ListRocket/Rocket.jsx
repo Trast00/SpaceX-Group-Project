@@ -11,8 +11,8 @@ const Rocket = (props) => {
 
   
   return (
-    <div className='row rocket'>
-      <img src={flickr_images} alt={"Rocket " + rocket_name } />
+    <div className="row rocket">
+      <img src={flickr_images} alt={`Rocket ${rocket_name}`} />
       <div className="column rocket-description">
         <h4>{rocket_name}</h4>
         <p>{reserved && (<span className='badge-reserved'>Reserved</span>)} {description}</p>
@@ -21,7 +21,16 @@ const Rocket = (props) => {
         : <button onClick={()=>{dispatch(reserveRocket(id))}}>Reserve Rocket</button>}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Rocket
+Rocket.propType = {
+  rocket : PropTypes.shape({
+    id : PropTypes.string, 
+    flickr_images : PropTypes.string,
+    rocket_name : PropTypes.string,
+    description : PropTypes.string,
+    reserved : PropTypes.bool,
+  })
+}
+export default Rocket;
