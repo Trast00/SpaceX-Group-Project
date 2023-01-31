@@ -19,7 +19,7 @@ const ListRocket = () => {
     <ul>
       {(listRocket)? listRocket.map(rocket => (
         <li key={rocket.id} ><Rocket rocket={rocket}/></li>
-      )): "Salut"}
+      )): <p>Empty list</p>}
     </ul>
   )
 

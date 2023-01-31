@@ -13,6 +13,7 @@ export const fetchRockets = createAsyncThunk('spacex/rocket/GET_ROCKETS', async 
       rocket_name: rocket.name,
       description: rocket.description,
       flickr_images: rocket.flickr_images[0],
+      reserved: false
     };
     listRocket.push(newRocket);
   });
