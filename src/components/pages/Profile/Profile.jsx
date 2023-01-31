@@ -7,9 +7,9 @@ const Profile = () => {
 
   return (<div className='flex-center'>
     <div className="flex-center column profile-missions">
-    <h2>mission</h2>
-    <ul className='no-style flex-center column list-reserved'>
-    </ul>
+      <h2>mission</h2>
+      <ul className='no-style flex-center column list-reserved'>
+      </ul>
     </div>
     <div className="flex-center column profile-rockets">
       <h2>My Rockets</h2>

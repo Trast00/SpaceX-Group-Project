@@ -111,8 +111,8 @@ describe('Simulate user navaigation interaction', () => {
       </React.StrictMode>,
     );
 
-    const profileLink = screen.getAllByRole('link')[1];
-    fireEvent.click(profileLink);
+    const missionLink = screen.getAllByRole('link')[1];
+    fireEvent.click(missionLink);
 
     expect(window.location.href).toBe((`${defaultRouteUrl}missions`));
   });
@@ -128,8 +128,8 @@ describe('Simulate user navaigation interaction', () => {
       </React.StrictMode>,
     );
 
-    const missionLink = screen.getAllByRole('link')[2];
-    fireEvent.click(missionLink);
+    const profileLink = screen.getAllByRole('link')[2];
+    fireEvent.click(profileLink);
 
     expect(window.location.href).toBe((`${defaultRouteUrl}myprofile`));
   });
