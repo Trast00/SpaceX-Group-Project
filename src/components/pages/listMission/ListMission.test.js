@@ -1,20 +1,22 @@
+import React from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { renderer } from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import { fireEvent, render } from '@testing-library/react';
-import React from 'react';
-import missionReducer from '../../../redux/missions/missionReducer';
-import configureStore from './redux/configureStore';
-import ListRocket from '../ListRocket/ListRocket';
+import ListMission from './ListMission';
+import configureStore from '../../../redux/configureStore';
 
 const store = configureStore;
 
 describe(' test the listmission ', () => {
   test('should ', () => {
-    const render = renderer.create(
+    const tree = renderer.create(
       <React.StrictMode>
         <Provider store={store}>
-          <ListRocket />
+          <ListMission />
         </Provider>
       </React.StrictMode>,
-    );
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });
