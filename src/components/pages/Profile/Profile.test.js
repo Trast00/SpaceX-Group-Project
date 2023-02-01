@@ -2,11 +2,11 @@ import renderer, { act } from 'react-test-renderer';
 import '@testing-library/jest-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import React from 'react';
+import { fireEvent, render, screen } from '@testing-library/react';
+import { Provider } from 'react-redux';
 import configureStore from '../../../redux/configureStore';
 import Profile from './Profile';
-import { fireEvent, render, screen } from '@testing-library/react';
 import App from '../../../App';
-import { Provider } from 'react-redux';
 
 const listRocketTest = [
   {
@@ -70,18 +70,18 @@ describe('test user interaction', () => {
     // test the first rocket
     const buttons = screen.getAllByRole('button');
 
-    //reserve 3 rocket
+    // reserve 3 rocket
     fireEvent.click(buttons[0]);
     fireEvent.click(buttons[1]);
     fireEvent.click(buttons[2]);
 
-    //Navigate to profile page
+    // Navigate to profile page
     const profileLink = screen.getAllByRole('link')[2];
     fireEvent.click(profileLink);
 
     // check if all elements are displayed in the list of rocket
-    expect(screen.getByText(listRocketTest[0].rocket_name)).toBeTruthy()
-    expect(screen.getByText(listRocketTest[1].rocket_name)).toBeTruthy()
-    expect(screen.getByText(listRocketTest[2].rocket_name)).toBeTruthy()
+    expect(screen.getByText(listRocketTest[0].rocket_name)).toBeTruthy();
+    expect(screen.getByText(listRocketTest[1].rocket_name)).toBeTruthy();
+    expect(screen.getByText(listRocketTest[2].rocket_name)).toBeTruthy();
   });
 });
