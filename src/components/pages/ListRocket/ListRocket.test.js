@@ -1,24 +1,21 @@
 import renderer from 'react-test-renderer';
 import '@testing-library/jest-dom';
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router } from 'react-router-dom';
 import React from 'react';
-import configureStore from './redux/configureStore';
-import App from './App';
+import ListRocket from './ListRocket';
+import configureStore from '../../../redux/configureStore';
 
 const store = configureStore;
 describe('test render', () => {
   test('List Rocket should match snapshoot', () => {
+    jest.mock('../../../redux/rockets/rocketReducer');
     const tree = renderer.create(
       <React.StrictMode>
         <Provider store={store}>
-          <Router>
-            <App />
-          </Router>
+          <ListRocket />
         </Provider>
       </React.StrictMode>,
     ).toJSON();
-
     expect(tree).toMatchSnapshot();
   });
 });

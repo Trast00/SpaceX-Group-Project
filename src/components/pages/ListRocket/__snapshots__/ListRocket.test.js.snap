@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test render List Rocket should match snapshoot 1`] = `
+<ul>
+  <p>
+    Empty list
+  </p>
+</ul>
+`;
