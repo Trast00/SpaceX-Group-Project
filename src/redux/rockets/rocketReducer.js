@@ -22,8 +22,26 @@ export const fetchRockets = createAsyncThunk('spacex/rocket/GET_ROCKETS', async 
 const rocketReducer = createSlice({
   name: 'spacex/rocket/',
   initialState: [],
-  reducer: {
-    fetchRockets,
+  reducers: {
+    reserveRocket: (state, action) => {
+      const id = action.payload;
+      const newList = state.listRocket.map((rocket) => {
+        if (rocket.id === id) { return { ...rocket, reserved: true }; }
+        return rocket;
+      });
+
+      return { ...state, listRocket: [...newList] };
+    },
+    unreserveRocket: (state, action) => {
+      const id = action.payload;
+      const newList = state.listRocket.map((rocket) => {
+        if (rocket.id === id) { return { ...rocket, reserved: false }; }
+        return rocket;
+      });
+
+      return { ...state, listRocket: [...newList] };
+    },
+
   },
   extraReducers: (builder) => {
     builder
@@ -32,4 +50,5 @@ const rocketReducer = createSlice({
   },
 });
 
+export const { unreserveRocket, reserveRocket } = rocketReducer.actions;
 export default rocketReducer.reducer;

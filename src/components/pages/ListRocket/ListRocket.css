@@ -13,6 +13,15 @@
   padding-left: 12px;
 }
 
+.badge-reserved {
+  width: fit-content;
+  font-size: 0.6rem;
+  color: white;
+  background-color: blue;
+  border-radius: 4px;
+  padding: 4px;
+}
+
 .rocket button {
   width: fit-content;
   background-color: blue;

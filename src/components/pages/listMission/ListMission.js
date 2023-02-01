@@ -11,10 +11,11 @@ const ListMission = () => {
   const DefaultDispatch = (id) => {
     dispatch(Default(id));
   };
+  const show = useSelector((data) => data.mission);
   useEffect(() => {
     dispatch(missionaction());
+    console.log(show.data);
   }, [dispatch]);
-  const show = useSelector((data) => data.mission);
   return (
     <div>
       <ul className="List-mission-main">

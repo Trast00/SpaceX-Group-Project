@@ -1,22 +1,63 @@
+import renderer, { act } from 'react-test-renderer';
+import '@testing-library/jest-dom';
+import { Provider, useDispatch } from 'react-redux';
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { renderer } from 'react-test-renderer';
-import { Provider } from 'react-redux';
-import { fireEvent, render } from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
 import ListMission from './ListMission';
 import configureStore from '../../../redux/configureStore';
 
-const store = configureStore;
+const listmissionarray = [
+  {
+    id: '9D1B7E0',
+    name: 'Thaicom',
+    description:
+      'Thaicom is the name of a series of communications …en Thailand and modern communications technology.',
+    reserved: false,
+  },
+  {
+    id: 'F4F83DE',
+    name: 'Telstar',
+    description:
+      'Telstar 19V (Telstar 19 Vantage) is a communicatio…5230lbs), launched by Ariane 5ECA on 1 July 2009.',
+    reserved: false,
+  },
+  {
+    id: 'F3364BF',
+    name: 'Iridium NEXT',
+    description:
+      'In 2017, Iridium began launching Iridium NEXT, a s… of the position of ground stations and gateways.',
+    reserved: false,
+  },
+];
 
-describe(' test the listmission ', () => {
+const store = configureStore;
+describe('teting', () => {
   test('should ', () => {
-    const tree = renderer.create(
+    jest.mock('../../../redux/missions/missionReducer.js');
+    const tree = (
       <React.StrictMode>
         <Provider store={store}>
           <ListMission />
         </Provider>
-      </React.StrictMode>,
-    ).toJSON();
+      </React.StrictMode>
+    );
     expect(tree).toMatchSnapshot();
   });
+});
+
+test('should first', async () => {
+  render(
+    <React.StrictMode>
+      <Provider store={store}>
+        <ListMission />
+      </Provider>
+    </React.StrictMode>,
+  );
+  await act(async () => {
+    store.dispatch({ type: 'spaceX/Mission/', payload: { listmissionarray } });
+  });
+
+  const name = screen.getAllByRole('heading')[0];
+  // const Missionname = listmissionarray[0];
+  expect(name).toHaveTextContent('Mission');
 });

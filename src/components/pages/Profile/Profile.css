@@ -1,0 +1,22 @@
+.profile-rockets,
+.profile-missions {
+  width: 100%;
+}
+
+.list-reserved {
+  width: 80%;
+  border: 1px solid #d3d3d3;
+  border-radius: 12px;
+  margin-top: 24px;
+  min-height: 100px;
+}
+
+.list-reserved li {
+  width: 100%;
+  padding: 12px;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.list-reserved li:last-child {
+  border: none;
+}

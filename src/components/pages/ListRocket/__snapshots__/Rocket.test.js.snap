@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test render List Rocket should match snapshoot 1`] = `
+<div
+  className="row rocket"
+>
+  <img
+    alt="Rocket rocket.name"
+    src="rocket.flickr_images[0]"
+  />
+  <div
+    className="column rocket-description"
+  >
+    <h4>
+      rocket.name
+    </h4>
+    <p>
+       
+      rocket.description
+    </p>
+    <button
+      onClick={[Function]}
+    >
+      Reserve Rocket
+    </button>
+  </div>
+</div>
+`;
