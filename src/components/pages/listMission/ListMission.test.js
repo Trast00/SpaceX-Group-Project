@@ -1,6 +1,6 @@
-import renderer, { act } from 'react-test-renderer';
+import { act } from 'react-test-renderer';
 import '@testing-library/jest-dom';
-import { Provider, useDispatch } from 'react-redux';
+import { Provider } from 'react-redux';
 import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
 import ListMission from './ListMission';
@@ -54,10 +54,12 @@ test('should first', async () => {
     </React.StrictMode>,
   );
   await act(async () => {
-    store.dispatch({ type: 'spaceX/Mission/', payload: { listmissionarray } });
+    store.dispatch({ type: 'spaceX/Mission/', payload: listmissionarray });
   });
 
-  const name = screen.getAllByRole('heading')[0];
+  const name = screen.getAllByRole('heading');
+  console.log(name);
   // const Missionname = listmissionarray[0];
-  expect(name).toHaveTextContent('Mission');
+  // console.log(Missionname);
+  expect(name.length).toBe(2);
 });
