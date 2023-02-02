@@ -7,3 +7,31 @@ exports[`test render List Rocket should match snapshoot 1`] = `
   </p>
 </ul>
 `;
+
+exports[`test render should  1`] = `
+<div>
+  <ul
+    className="List-mission-main"
+  >
+    <li
+      className="Mission-List"
+    >
+      <h3
+        className="border"
+      >
+        Mission
+      </h3>
+      <p
+        className="Header border"
+      >
+        Description
+      </p>
+      <h4
+        className="border"
+      >
+        Status
+      </h4>
+    </li>
+  </ul>
+</div>
+`;
