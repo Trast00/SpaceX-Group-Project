@@ -14,7 +14,6 @@ const ListMission = () => {
   const show = useSelector((data) => data.mission);
   useEffect(() => {
     dispatch(missionaction());
-    console.log(show.data);
   }, [dispatch]);
   return (
     <div>

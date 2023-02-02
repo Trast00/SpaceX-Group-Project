@@ -58,8 +58,9 @@ test('should first', async () => {
   });
 
   const name = screen.getAllByRole('heading');
-  console.log(name);
-  // const Missionname = listmissionarray[0];
-  // console.log(Missionname);
   expect(name.length).toBe(2);
+  const title = screen.getAllByRole('heading')[0];
+  const listarray = listmissionarray[0];
+  console.log(title);
+  expect(title.name).toHaveTextContent(listarray.name);
 });
