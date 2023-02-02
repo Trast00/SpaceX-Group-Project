@@ -20,13 +20,8 @@ const Rocket = (props) => {
         </div>
         
         {reserved? 
-<<<<<<< HEAD
          <button onClick={()=>{dispatch(unreserveRocket(id))}} className="btn-cancel">Cancel reservation</button>
         : <button onClick={()=>{dispatch(reserveRocket(id))}}>Reserve Rocket</button>}
-=======
-         <button onClick={()=>{dispatch(unreserveRocket(id))}}>Cancel reservation</button>
-        : <button onClick={()=> {dispatch(reserveRocket(id))}}>Reserve Rocket</button>}
->>>>>>> 3cbb530dfc7c0ec05856236b65745d2d681c93b5
       </div>
     </div>
   );
