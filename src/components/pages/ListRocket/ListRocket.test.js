@@ -8,7 +8,6 @@ import configureStore from '../../../redux/configureStore';
 const store = configureStore;
 describe('test render', () => {
   test('List Rocket should match snapshoot', () => {
-    jest.mock('../../../redux/rockets/rocketReducer');
     const tree = renderer.create(
       <React.StrictMode>
         <Provider store={store}>
