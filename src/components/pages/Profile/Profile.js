@@ -11,11 +11,11 @@ const Profile = () => {
       <div className="flex-center column profile-missions">
         <h2>mission</h2>
         <ul className="no-style flex-center column list-reserved">
-          {listMission ? listMission.filter((data) => data.reserved).map((mission) => (
+          {listMission.length > 0 ? listMission.filter((data) => data.reserved).map((mission) => (
             <li key={mission.id} id={mission.id}>
               <h4>{mission.name}</h4>
             </li>
-          )) : (<p>Empty List</p>)}
+          )) : 'Empty List'}
         </ul>
       </div>
       <div className="flex-center column profile-rockets">
