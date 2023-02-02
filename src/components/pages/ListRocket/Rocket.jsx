@@ -18,7 +18,7 @@ const Rocket = (props) => {
         <p>{reserved && (<span className='badge-reserved'>Reserved</span>)} {description}</p>
         {reserved? 
          <button onClick={()=>{dispatch(unreserveRocket(id))}}>Cancel reservation</button>
-        : <button onClick={()=>{dispatch(reserveRocket(id))}}>Reserve Rocket</button>}
+        : <button onClick={()=> {dispatch(reserveRocket(id))}}>Reserve Rocket</button>}
       </div>
     </div>
   );
