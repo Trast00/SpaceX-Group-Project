@@ -12,21 +12,21 @@ const listmissionarray = [
     id: '9D1B7E0',
     name: 'Thaicom',
     description:
-        'Thaicom is the name of a series of communications …en Thailand and modern communications technology.',
+        'Thaicom is the name of a series of communications Thailand .',
     reserved: false,
   },
   {
     id: 'F4F83DE',
     name: 'Telstar',
     description:
-        'Telstar 19V (Telstar 19 Vantage) is a communicatio…5230lbs), launched by Ariane 5ECA on 1 July 2009.',
+        'Telstar 19V (Telstar 19 Vantage) is a communicatio…5230lbs).',
     reserved: false,
   },
   {
     id: 'F3364BF',
     name: 'Iridium NEXT',
     description:
-        'In 2017, Iridium began launching Iridium NEXT, a s… of the position of ground stations and gateways.',
+        'In 2017, Iridium began launching Iridium NEXT.',
     reserved: false,
   },
 ];

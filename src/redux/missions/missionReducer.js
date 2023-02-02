@@ -42,7 +42,6 @@ const missionReducer = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(missionaction.fulfilled, (states, action) => {
-      // eslint-disable-next-line no-param-reassign
         states.data = action.payload;
       });
   },
