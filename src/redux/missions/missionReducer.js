@@ -41,9 +41,8 @@ const missionReducer = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(missionaction.fulfilled, (states, action) => {
-        states.data = action.payload;
-      });
+      .addCase(missionaction.fulfilled,
+        (states, action) => ({ ...states, data: [...action.payload] }));
   },
 });
 
