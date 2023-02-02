@@ -12,8 +12,12 @@ const ListMission = () => {
     dispatch(Default(id));
   };
   const show = useSelector((data) => data.mission);
+
   useEffect(() => {
-    dispatch(missionaction());
+    if (show.data.length === 0) {
+      dispatch(missionaction());
+    }
+    // console.log(show.length);
   }, [dispatch]);
   return (
     <div>
