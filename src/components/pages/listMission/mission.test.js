@@ -32,12 +32,6 @@ const listmissionarray = [
 ];
 
 test('should first', async () => {
-  const missiontest = {
-    id: 'mission.id',
-    name: 'mission.name',
-    description: 'mission.description',
-    reserved: false,
-  };
   render(
     <React.StrictMode>
       <Provider store={store}>
@@ -49,8 +43,6 @@ test('should first', async () => {
     store.dispatch({ type: 'spaceX/Mission/fetchdata/fulfilled', payload: listmissionarray });
   });
 
-  // const name = screen.getAllByRole('heading');
-  // expect(name.length).toBe(2);
   const title = screen.getAllByRole('heading')[0];
   const listmissionar = listmissionarray[0];
   expect(title).toHaveTextContent(listmissionar.name);
