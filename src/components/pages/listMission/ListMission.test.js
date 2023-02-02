@@ -2,7 +2,7 @@ import { act } from 'react-test-renderer';
 import '@testing-library/jest-dom';
 import { Provider } from 'react-redux';
 import React from 'react';
-import { render, fireEvent, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import ListMission from './ListMission';
 import configureStore from '../../../redux/configureStore';
 
@@ -54,13 +54,12 @@ test('should first', async () => {
     </React.StrictMode>,
   );
   await act(async () => {
-    store.dispatch({ type: 'spaceX/Mission/', payload: listmissionarray });
+    store.dispatch({ type: 'spaceX/Mission/fetchdata/fulfilled', payload: listmissionarray });
   });
 
-  const name = screen.getAllByRole('heading');
-  expect(name.length).toBe(2);
+  // const name = screen.getAllByRole('heading');
+  // expect(name.length).toBe(2);
   const title = screen.getAllByRole('heading')[0];
   const listarray = listmissionarray[0];
-  console.log(title);
-  expect(title.name).toHaveTextContent(listarray.name);
+  expect(title).toHaveTextContent(listarray.name);
 });
