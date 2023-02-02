@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import { Update, Default } from '../../../redux/missions/missionReducer';
 
 const Mission = (props) => {
@@ -13,7 +13,8 @@ const Mission = (props) => {
   };
 
   const {
-    id, name, description, reserved,
+    id, name,
+    description, reserved,
   } = props.mission;
 
   return (
@@ -42,12 +43,12 @@ const Mission = (props) => {
   );
 };
 
-Mission.PropTypes = {
-  mission: PropTypes.shape({
-    id: PropTypes.string,
-    name: PropTypes.string,
-    description: PropTypes.string,
-    reserved: PropTypes.bool,
+Mission.propTypes = {
+  mission: propTypes.shape({
+    id: propTypes.string,
+    name: propTypes.string,
+    description: propTypes.string,
+    reserved: propTypes.bool,
   }),
 };
 
