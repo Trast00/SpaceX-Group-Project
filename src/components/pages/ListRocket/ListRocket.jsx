@@ -9,16 +9,16 @@ const ListRocket = () => {
   const listRocket = useSelector((state) => state.rocketReducer.listRocket, shallowEqual);
 
   useEffect(() => {
-    if(!listRocket){
+    if (!listRocket) {
       dispatch(fetchRockets());
     }
   }, [dispatch]);
 
   return (
     <ul>
-      {(listRocket)? listRocket.map(rocket => (
-        <li key={rocket.id} ><Rocket rocket={rocket}/></li>
-      )): <p>Empty list</p>}
+      {(listRocket) ? listRocket.map((rocket) => (
+        <li key={rocket.id}><Rocket rocket={rocket} /></li>
+      )) : <p>Empty list</p>}
     </ul>
   );
 };

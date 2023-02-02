@@ -17,8 +17,7 @@ const ListMission = () => {
     if (show.data.length === 0) {
       dispatch(missionaction());
     }
-    // console.log(show.length);
-  }, [dispatch]);
+  }, [dispatch, show.data.length]);
   return (
     <div>
       <ul className="List-mission-main">
