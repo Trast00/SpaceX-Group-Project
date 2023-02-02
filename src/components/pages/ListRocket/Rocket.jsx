@@ -18,19 +18,19 @@ const Rocket = (props) => {
         <p>{reserved && (<span className='badge-reserved'>Reserved</span>)} {description}</p>
         {reserved? 
          <button onClick={()=>{dispatch(unreserveRocket(id))}}>Cancel reservation</button>
-        : <button onClick={()=>{dispatch(reserveRocket(id))}}>Reserve Rocket</button>}
+        : <button onClick={()=> {dispatch(reserveRocket(id))}}>Reserve Rocket</button>}
       </div>
     </div>
   );
 };
 
 Rocket.propType = {
-  rocket : PropTypes.shape({
-    id : PropTypes.string, 
-    flickr_images : PropTypes.string,
-    rocket_name : PropTypes.string,
-    description : PropTypes.string,
-    reserved : PropTypes.bool,
-  })
-}
+  rocket: PropTypes.shape({
+    id: PropTypes.string,
+    flickr_images: PropTypes.string,
+    rocket_name: PropTypes.string,
+    description: PropTypes.string,
+    reserved: PropTypes.bool,
+  }),
+};
 export default Rocket;
