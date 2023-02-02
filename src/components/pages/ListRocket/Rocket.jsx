@@ -14,11 +14,14 @@ const Rocket = (props) => {
     <div className="row rocket">
       <img src={flickr_images} alt={`Rocket ${rocket_name}`} />
       <div className="column rocket-description">
-        <h4>{rocket_name}</h4>
-        <p>{reserved && (<span className='badge-reserved'>Reserved</span>)} {description}</p>
+        <div className="description-wrapper">
+          <h4>{rocket_name}</h4>
+          <p>{reserved && (<span className='badge-reserved'>Reserved</span>)} {description}</p>
+        </div>
+        
         {reserved? 
-         <button onClick={()=>{dispatch(unreserveRocket(id))}}>Cancel reservation</button>
-        : <button onClick={()=> {dispatch(reserveRocket(id))}}>Reserve Rocket</button>}
+         <button onClick={()=>{dispatch(unreserveRocket(id))}} className="btn-cancel">Cancel reservation</button>
+        : <button onClick={()=>{dispatch(reserveRocket(id))}}>Reserve Rocket</button>}
       </div>
     </div>
   );
