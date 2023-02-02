@@ -43,7 +43,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [No Live Demo]()
+- [Live Demo](https://space-travelers-hub-64gl.onrender.com/)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -84,11 +84,10 @@ To run the project, execute the following command:
 - Twitter: [dicko allassane](https://twitter.com/AllassaneDicko0/)
 - LinkedIn: [dicko allassane](https://www.linkedin.com/in/allassane-dicko-744aaa224)
 
-👤 **Author 2**
+👤 **Hassaan Baig**
 
-- GitHub: [userName]()
-- Twitter: [userName]()
-- LinkedIn: [userName]()
+- GitHub: [Hassaanjbaig-code](https://github.com/Hassaanjbaig-code/)
+- LinkedIn: [hassaan baig](https://www.linkedin.com/in/hassaan-baig-855788241/)
 
 ## 🤝 Contributing <a name="contributing"></a>
 
