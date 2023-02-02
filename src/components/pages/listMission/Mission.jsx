@@ -43,13 +43,4 @@ const Mission = (props) => {
   );
 };
 
-Mission.propTypes = {
-  mission: propTypes.shape({
-    id: propTypes.string,
-    name: propTypes.string,
-    description: propTypes.string,
-    reserved: propTypes.bool,
-  }),
-};
-
 export default Mission;
