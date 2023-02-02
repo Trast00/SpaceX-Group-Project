@@ -1,0 +1,60 @@
+.Mission-List {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 11rem 63% 12% 12%;
+}
+
+.Mission-List p {
+  text-align: justify;
+  padding: 10px;
+}
+
+.Header {
+  font-weight: 900;
+}
+
+.border {
+  border: 1px solid #e5e6eb;
+}
+
+.Mission-row h3 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Not-Approved {
+  background: #6d757d;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.Not-Approved-button {
+  border: 1px solid #121212;
+  padding: 11px;
+  font-size: 1rem;
+  background: #fff;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.Not-Approved-button:active {
+  background-color: rgba(255, 0, 0, 0.403);
+}
+
+.Approved {
+  background-color: #18a2ba;
+  border-radius: 12px;
+}
+
+.Approved-button {
+  background: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
+.List-mission-main {
+  margin: 2rem;
+}

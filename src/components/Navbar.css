@@ -1,0 +1,24 @@
+.navbar {
+  justify-content: space-between;
+  padding: 12px;
+}
+
+.navbar img {
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+}
+
+.list-nav {
+  gap: 8px;
+}
+
+.navLink {
+  font-size: 0.8rem;
+  color: var(--color-text-blue);
+  text-decoration: none;
+}
+
+.navLink.active {
+  text-decoration: underline;
+}

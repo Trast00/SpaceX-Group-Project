@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  --color-primary: #0290ff;
+  --color-primary-dark: #0290ff;
+  --color-text: #121212;
+  --color-text-blue: #227fdc;
+  --color-text-gray: #888;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.no-style {
+  list-style: none;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+}
+
+.seprator {
+  height: 15px;
+  border: 1px solid #121212;
+}
+
+.App {
+  text-align: center;
+}

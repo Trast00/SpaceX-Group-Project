@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test render of profile Profile should match snapshoot 1`] = `
+<div
+  className="flex-center"
+>
+  <div
+    className="flex-center column profile-missions"
+  >
+    <h2>
+      mission
+    </h2>
+    <ul
+      className="no-style flex-center column list-reserved"
+    >
+      Empty List
+    </ul>
+  </div>
+  <div
+    className="flex-center column profile-rockets"
+  >
+    <h2>
+      My Rockets
+    </h2>
+    <ul
+      className="no-style flex-center column list-reserved"
+    >
+      Empty List
+    </ul>
+  </div>
+</div>
+`;

@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test render List Rocket should match snapshoot 1`] = `
+<nav
+  className="flex-center navbar"
+>
+  <div
+    className="row logo"
+  >
+    <img
+      alt="Logo Space X"
+      src="planet.png"
+    />
+    <h1>
+      Space Travelers Hub
+    </h1>
+  </div>
+  <ul
+    className="flex-center no-style list-nav"
+  >
+    <li>
+      <a
+        aria-current="page"
+        className="navLink active"
+        href="/"
+        onClick={[Function]}
+        path="/"
+      >
+        Rockets
+      </a>
+    </li>
+    <li>
+      <a
+        className="navLink"
+        href="/missions"
+        onClick={[Function]}
+        path="/missions"
+      >
+        Missions
+      </a>
+    </li>
+    <hr
+      className="seprator"
+    />
+    <li>
+      <a
+        className="navLink"
+        href="/myprofile"
+        onClick={[Function]}
+        path="/myprofile"
+      >
+        My Profile
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
